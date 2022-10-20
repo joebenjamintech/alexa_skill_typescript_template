@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hello world",
+            "invocationName": "typescript node boilerplate",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
