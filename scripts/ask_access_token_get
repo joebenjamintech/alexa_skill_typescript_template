@@ -1,0 +1,5 @@
+#!/bin/bash
+# author: Joe Benjamin
+# gets the ASK_ACCESS_TOKEN from the ~/.zshrc file, if in bashrc or any other, will need to update the path
+
+sed -r -n 's/.*ASK_ACCESS_TOKEN="(.*)"/\1/p' ~/.zshrc
