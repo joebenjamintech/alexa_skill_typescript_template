@@ -1,18 +1,14 @@
 #!/bin/bash
 
-dir=$1
-skill_name=$2
-deploy=$3
+skill_name=$1
 
 invocation_name=$(echo $skill_name | sed "s/_/ /g")
 
-[[ -z "$dir" ]] && echo "missing param dir" && exit 1
 [[ -z "$skill_name" ]] && echo "missing param skill_name" && exit 1
 
-cp ~/ask_helpers/boilerplate/typescript_nodejs_boilerplate -rf ./$dir
-sed -i "s/typescript_node_boilerplate/$skill_name/" ./$dir/skill-package/skill.json ./$dir/.vimspector.json ./$dir/lambda/package.json
-sed -i "s/typescript\snode\sboilerplate/$invocation_name/" ./$dir/skill-package/interactionModels/custom/en-US.json
+sed -i "s/typescript_node_boilerplate/$skill_name/" ./skill/skill-package/skill.json ./skill/.vimspector.json ./skill/lambda/package.json
+sed -i "s/typescript\snode\sboilerplate/$invocation_name/" ./skill/skill-package/interactionModels/custom/en-US.json
 
-cd ./$dir/lambda
+pushd ./skill/lambda
 npm i
-[[ "$deploy" == deploy ]] && npm run build-deploy
+popd
