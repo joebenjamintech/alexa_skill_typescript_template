@@ -1,0 +1,26 @@
+{
+  "name": "typescript_node_boilerplate",
+  "version": "1.1.0",
+  "description": "alexa utility for quickly building skills",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc --build tsconfig.json",
+    "build-final": "cp package.json ./dist && cd dist && npm i --production",
+    "build": "rm dist -rf; npm run compile; npm run build-final",
+    "build-deploy": "npm run build; cd ../; ask deploy; cd lambda;"
+  },
+  "author": "Amazon Alexa",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-controls": "^0.9.2",
+    "ask-sdk-core": "^2.6.0",
+    "ask-sdk-model": "^1.18.0",
+    "aws-sdk": "^2.326.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.0",
+    "ask-sdk-local-debug": "^1.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
