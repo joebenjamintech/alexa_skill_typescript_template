@@ -32,7 +32,7 @@ abstract class LiteralContentControl extends Control {
   }
 }
 
-class LauncRequestControl extends LiteralContentControl {
+class LaunchRequestControl extends LiteralContentControl {
   canHandle(input: ControlInput) {
     return InputUtil.isLaunchRequest(input);
   }
@@ -57,7 +57,7 @@ class HelloControl extends ContainerControl {
   constructor(props: any) {
     super(props);
     this.addChild(
-      new LauncRequestControl("what's up? can I help you today?", false)
+      new LaunchRequestControl("what's up? can I help you today?", false)
     )
       .addChild(
         new StopOrCancelIntentControl(
