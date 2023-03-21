@@ -14,7 +14,7 @@ printf "Replacing boilerplate skill name with $skill_name...\n"
 printf "Replacing boilerplate invocation name with $invocation_name...\n"
 
 if [[ $(uname) == 'Darwin' ]]; then
-    sed -i '' -e "s/typescript_node_boilerplate/$skill_name/" ./skill/skill-package/skill.json ./skill/.vimspector.json ./skill/lambda/package.json
+    sed -i '' -e "s/typescript_node_boilerplate/$skill_name/" ./skill/skill-package/skill.json ./.vimspector.json ./skill/lambda/package.json
     sed -i '' -e "s/typescript node boilerplate/$invocation_name/" ./skill/skill-package/interactionModels/custom/en-US.json
 else
     sed -i "s/typescript_node_boilerplate/$skill_name/" ./skill/skill-package/skill.json ./skill/.vimspector.json ./skill/lambda/package.json
