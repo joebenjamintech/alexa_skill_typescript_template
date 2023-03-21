@@ -24,3 +24,5 @@ fi
 cd ./skill/lambda
 npm ci
 cd ../..
+
+rm -rf init_repo
