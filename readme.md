@@ -33,11 +33,11 @@ This repository contains the following files:
 .
 ├── .vscode            # configuration files for VS Code editor
 ├── scripts            # scripts for local development
-│   ├── get_ask_skill_id      # reads the Skill ID from local files
-│   ├── get_ask_token         # requests ASK token from ASK website
-│   ├── get_env               # reads variables into memory for running tasks
-│   └── set_ask_access_token  # generates and saves a new ASK Access Token
-│                             # using the ASK CLI
+│   ├── get_ask_skill_id   # reads the Skill ID from local files
+│   ├── get_ask_token      # requests ASK token from ASK website
+│   ├── get_env            # reads variables into memory for running tasks
+│   └── set_ask_token      # generates and saves a new ASK Access Token
+│                          # using the ASK CLI
 ├── skill              # source code and config for the Alexa Skill
 │   ├── lambda         # source code for the Alexa Skill Lambda
 │   └── skill-package  # configuration for the Alexa Skill
