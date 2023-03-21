@@ -4,6 +4,9 @@
             "invocationName": "typescript node boilerplate",
             "intents": [
                 {
+                    "name": "AMAZON.FallbackIntent"
+                },
+                {
                     "name": "AMAZON.CancelIntent",
                     "samples": []
                 },

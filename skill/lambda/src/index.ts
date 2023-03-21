@@ -53,19 +53,39 @@ class SessionEndedRequestControl extends LiteralContentControl {
   }
 }
 
+class HelloResponseControl extends LiteralContentControl {
+  canHandle(input: ControlInput) {
+    const canHandle = InputUtil.isIntent(input, 'HelloWorldIntent');
+    return canHandle;
+  }
+}
+
+class FallbackResponseControl extends LiteralContentControl {
+  canHandle(input: ControlInput) {
+    return InputUtil.isFallbackIntent(input);
+  }
+}
+
 class HelloControl extends ContainerControl {
   constructor(props: any) {
     super(props);
     this.addChild(
       new LaunchRequestControl("what's up? can I help you today?", false)
     )
+      .addChild(new HelloResponseControl('hello world', false))
       .addChild(
         new StopOrCancelIntentControl(
           "I guess you don't want to talk anymore",
           true
         )
       )
-      .addChild(new SessionEndedRequestControl('have a good day', false));
+      .addChild(new SessionEndedRequestControl('have a good day', false))
+      .addChild(
+        new FallbackResponseControl(
+          "I'm sorry, I don't understand that.",
+          false
+        )
+      );
   }
 }
 

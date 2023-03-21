@@ -7,7 +7,11 @@
 # must configure ask cli for this to work
 # The ask configure command helps you configure the credentials that ASK CLI uses to authenticate you to Amazon developer services and Amazon Web Services (AWS)
 
-echo $(ask util generate-lwa-tokens --scopes alexa::ask:skills:debug) \
-| sed -E 's/.*"access_token": "(.*?)", "refresh_token".*/\1/' \
-| xargs -I {} sed -E -i 's/(ASK_ACCESS_TOKEN)=".*"/\1="{}"/' ~/.zshrc
+TOKEN=$(ask util generate-lwa-tokens --scopes alexa::ask:skills:debug | sed -E -n 's/.*\"access_token\": \"([^\"]+)\".*/\1/p')
+
+if [[ $(uname) == 'Darwin' ]]; then
+    sed -E -i '' "s/(ASK_ACCESS_TOKEN)=\"[^\"]+\"/\1=\"$TOKEN\"/" ~/.zshrc
+else
+    sed -E -i "s/(ASK_ACCESS_TOKEN)=\"[^\"]+\"/\1=\"$TOKEN\"/" ~/.zshrc
+fi
 
