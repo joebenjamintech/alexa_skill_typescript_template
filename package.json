@@ -6,7 +6,10 @@
   "scripts": {
     "ask-dialog": "cd skill/lambda && npm run ask-dialog",
     "build": "cd skill/lambda && npm run build",
-    "install": "cd skill/lambda && npm install"
+    "build-deploy": "cd skill/lambda && npm run build-deploy",
+    "install": "cd skill/lambda && npm install",
+    "refresh-token": "cd skill/lambda && npm run refresh-token",
+    "start": "cd skill/lambda && npm run start"
   },
   "repository": {
     "type": "git",

@@ -14,7 +14,7 @@ Before you begin using this repository, please ensure that you have:
 1. Use GitHub's "Create from Template" functionality via either:
   - [GitHub web UI](https://github.com/joedbenjamin/alexa_skill_typescript_template/generate)
   - [GitHub CLI](https://cli.github.com):  
-    `gh repo create --template joedbenjamin/alexa_skill_typescript_template`
+    `gh repo create --public --template joedbenjamin/alexa_skill_typescript_template`
 
 2. Once the repo is created, clone it and run the following script:
 `./init_repo`
@@ -22,7 +22,9 @@ Before you begin using this repository, please ensure that you have:
   Alternately, provide the skill name you would like to use, e.g.:
   `./init_repo the_coolest_skill_ever`
 
-3. Start coding and deploy your new Alexa Skill
+3. Open up `skill/lambda/src/index.ts` and start coding
+4. When you're ready to deploy your skill, run the `build-deploy` NPM script:
+  `npm run build-deploy`
 4. Profit!
 
 # Repository Structure
