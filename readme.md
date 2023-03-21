@@ -12,7 +12,7 @@ Before you begin using this repository, please ensure that you have:
 # Getting Started
 
 1. Use GitHub's "Create from Template" functionality via either:
-  - [GitHub web UI](./generate)
+  - [GitHub web UI](https://github.com/joedbenjamin/alexa_skill_typescript_template/generate)
   - [GitHub CLI](https://cli.github.com):  
     `gh repo create --template joedbenjamin/alexa_skill_typescript_template`
 
