@@ -4,10 +4,10 @@
       "adapter": "vscode-node",
       "variables": {
         "ACCESS_TOKEN": {
-          "shell": "${workspaceFolder}/scripts/ask_access_token_get"
+          "shell": "${workspaceFolder}/scripts/set_ask_token"
         },
         "SKILL_ID": {
-          "shell": "${workspaceFolder}/scripts/ask_skill_id_get typescript_node_boilerplate"
+          "shell": "${workspaceFolder}/scripts/get_ask_skill_id typescript_node_boilerplate"
         }
       },
       "configuration": {
