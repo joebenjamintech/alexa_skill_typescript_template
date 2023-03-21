@@ -13,7 +13,7 @@
       "configuration": {
         "type": "pwa-node",
         "request": "launch",
-        "program": "${workspaceFolder}/lambda/node_modules/ask-sdk-local-debug/dist/LocalDebuggerInvoker.js",
+        "program": "${workspaceFolder}/skill/lambda/node_modules/ask-sdk-local-debug/dist/LocalDebuggerInvoker.js",
         "args": [
           "--accessToken",
           "${ACCESS_TOKEN}",
@@ -22,12 +22,12 @@
           "--handlerName",
           "handler",
           "--skillEntryFile",
-          "${workspaceFolder}/lambda/dist/index.js",
+          "${workspaceFolder}/skill/lambda/dist/index.js",
           "--region",
           "NA"
         ],
-        "cwd": "${workspaceFolder}/lambda",
-        "outFiles": ["${workspaceRoot}/lambda/dist/**/*.js"]
+        "cwd": "${workspaceFolder}/skill/lambda",
+        "outFiles": ["${workspaceRoot}/skill/lambda/dist/**/*.js"]
       }
     }
   }
