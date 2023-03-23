@@ -17,10 +17,19 @@ Before you begin using this repository, please ensure that you have:
     `gh repo create --public --template joedbenjamin/alexa_skill_typescript_template`
 
 2. Once the repo is created, clone it and run the following script:
-`./init_repo`
+  ```sh
+  > ./init_repo
+  ```
   This will initialize the template with a skill name and invocation name matching your current directory.
-  Alternately, provide the skill name you would like to use, e.g.:
-  `./init_repo the_coolest_skill_ever`
+  <br>
+  Alternately, provide the skill name you would like to use:<br>
+  ```sh
+  > ./init_repo the_coolest_skill_ever
+  ```
+  Or, the skill name and the invocation:<br>
+  ```sh
+  > ./init_repo the_coolest_skill_ever "coolest skill"
+  ```
 
 3. Open up `skill/lambda/src/index.ts` and start coding
 4. When you're ready to deploy your skill, run the `build-deploy` NPM script:

@@ -8,7 +8,13 @@ if [[ -z "$skill_name" ]] ; then
     skill_name=$(basename $(pwd))
 fi
 
-invocation_name=$(echo $skill_name | sed "s/_/ /g")
+# default skill name to second parameter
+invocation_name=$2
+
+# otherwise, derive from skill name
+if [[ -z "$invocation_name" ]] ; then
+    invocation_name=$(echo $skill_name | sed "s/_/ /g")
+fi
 
 printf "Replacing boilerplate skill name with $skill_name...\n"
 printf "Replacing boilerplate invocation name with $invocation_name...\n"
