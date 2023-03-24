@@ -32,8 +32,15 @@ Before you begin using this repository, please ensure that you have:
   ```
 
 3. Open up `skill/lambda/src/index.ts` and start coding
-4. When you're ready to deploy your skill, run the `build-deploy` NPM script:
-  `npm run build-deploy`
+4. When you're ready to deploy your skill:
+  * Get an ASK Access Token:  
+  ```sh
+  > npm run refresh-token
+  ```
+  * Deploy to Alexa:
+  ```sh
+  > npm run build-deploy
+  ```
 4. Profit!
 
 # Repository Structure
