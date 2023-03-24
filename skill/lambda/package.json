@@ -13,7 +13,7 @@
     "clean": "rimraf dist",
     "compile": "tsc --build tsconfig.json",
     "deploy": "cd ../; ask deploy",
-    "refresh-token": "../../scripts/ask_access_token_set",
+    "refresh-token": "../../scripts/set_ask_token",
     "start": "run-s build ask-dialog"
   },
   "dependencies": {
